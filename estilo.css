@@ -1,0 +1,72 @@
+:root {
+  --fundo: #fafafa;
+  --texto: #1f2328;
+  --suave: #59636e;
+  --borda: #d8dee4;
+  --destaque: #c00000;
+  --cartao: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #0d1117;
+    --texto: #e6edf3;
+    --suave: #9198a1;
+    --borda: #30363d;
+    --destaque: #ff5c5c;
+    --cartao: #161b22;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+header nav {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--borda);
+}
+
+header nav a:first-child { font-weight: 700; margin-right: auto; }
+
+a { color: var(--destaque); }
+code { overflow-wrap: anywhere; }
+header nav a { text-decoration: none; }
+header nav a:hover { text-decoration: underline; }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.25rem; margin: 32px 0 8px; }
+.atualizado { color: var(--suave); margin: 0 0 24px; }
+
+.cartao {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+  color: var(--suave);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--borda);
+}
